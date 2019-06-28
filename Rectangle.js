@@ -2,7 +2,7 @@
 
 class Rectangle {
     constructor(rows, columns) {
-        this.totalElement = rows * columns;
+        this.totalElements = rows * columns;
         this.originalRowSize = rows;
         this.originalColumnSize = columns;
         this.currentRowIndex = 0;
@@ -28,7 +28,6 @@ class Rectangle {
         this.maxRow = this.originalRowSize;
         this.maxColumn = this.originalColumnSize;
         this.currentDirectionIndex = 0;
-        this.rectangle = new Array(this.originalRowSize).fill(new Array(this.originalColumnSize));
     }
 
     move() {
@@ -48,7 +47,7 @@ class Rectangle {
 
     getNextRectangleCoordinates() {
         // Reset if we have visited all the elements in the 2DArray
-        if(this.visitedElements >= this.totalElement) {
+        if(this.visitedElements >= this.totalElements) {
             this.reset();
         }
 
